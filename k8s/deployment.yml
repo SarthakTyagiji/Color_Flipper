@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - name: pod
+        image: tyagisarthak/color-app:latest
+        ports:
+          - containerPort: 80
+        imagePullPolicy: Always
+

@@ -2,7 +2,7 @@ version: '3'
 
 services:
   nginx:
-    image: tyagisarthak/color:latest
+    image: tyagisarthak/color-app:latest
     ports:
       - "8000:80"
     command: ["nginx", "-g", "daemon off;"]
